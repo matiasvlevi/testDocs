@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Multiple examples & descriptions on the usage of the library's methods & constructors. Learn how to Create, Train & Use your Deep Neural Networks!" />
+  <meta name="author" content="Matias Vazquez-Levi" />
+  <meta name="keywords" content="Dann, Dannjs, js, nn, nn js, javascript, ai, ml, dnn, deep neural network, neural network, dnnjs, library, machine learning, documentation, docs, examples, example,wiki" />
+
+
+  <title>Dannjs | Documentation</title>
+  <link rel="stylesheet" href="../assets/css/highlight.css" id="site_styles">
+  <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+  <!-- Google Tag Manager -->
+  <!-- <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PT2SZHT');
+  </script> -->
+  <!-- End Google Tag Manager -->
+  <link rel="shortcut icon" type="image/png" href="../assets/favicon.ico">
+  <script src="../assets/js/hljs.min.js"></script>
+  <script>
+    hljs.configure({
+      languages: ['js']
+    });
+    hljs.highlightAll();
+  </script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PT2SZHT"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+  <!-- End Google Tag Manager (noscript) -->
+  <div id="doc">
+    <header class="main-header">
+      <div class="content">
+        <a href="../index.html">
+          <div class="project-title">
+ 
+            <h1 class="project-name">Dannjs</h1> <span class="project-version">2.3.13</span>  
+            <p class="description">Deep Neural Network Library for JavaScript.</p>
+          </div>
+        </a>
+        <ul class="jump-links">
+          <li><a href="#top" class="top-jump-link">top</a></li>
+        </ul>
+      </div>
+    </header>
+    <div id="bd" class="main-body">
+
+      <div id="docs-sidebar" class="sidebar apidocs">
+      </div>
+
+      <div id="docs-main" class="apidocs">
+        <div id ="content-main" class="content container">
+
+
+<div id="top">
+  <a href="../index.html">
+    <div class="back">
+      <img src="../assets/arrow.svg" alt="" id="backImg" width="25%">
+    </div>
+  </a>
+  <h1 class="main-title">Matrix Class</h1>
+
+</div>
+
+<div id="bottom">
+
+  <div id="main-box">
+    <div id="table-contents">
+      <div class="module-wrap side" id="Matrix">
+        <ul class="content-table">
+
+
+
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_add">add</a>
+
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_add">add</a>
+
+                        <span class="flag static">static</span>
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_fillCol">fillCol</a>
+
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_fillRow">fillRow</a>
+
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_fromArray">fromArray</a>
+
+                        <span class="flag static">static</span>
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_initiate">initiate</a>
+
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_insert">insert</a>
+
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_log">log</a>
+
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_make">make</a>
+
+                        <span class="flag static">static</span>
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_map">map</a>
+
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_map">map</a>
+
+                        <span class="flag static">static</span>
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_mult">mult</a>
+
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_mult">mult</a>
+
+                        <span class="flag static">static</span>
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_randomize">randomize</a>
+
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_set">set</a>
+
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_sub">sub</a>
+
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_sub">sub</a>
+
+                        <span class="flag static">static</span>
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_toArray">toArray</a>
+
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_toArray">toArray</a>
+
+                        <span class="flag static">static</span>
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_transpose">transpose</a>
+
+                </li>
+
+
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+      <ul>
+    </div>
+    </div>
+
+    <div id="methods-wrap">
+<div id="method_add" class="module-wrap" >
+    <h3  class="name">add</h3>
+
+
+    <div id="desc">
+      <p><p>Add a value or Matrix to a Matrix object.</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name">n</code>
+            <span class="type"><span id="badge">Number | <a href="../classes/Matrix.html" class="crosslink">Matrix</a></span></span>
+        <div id="desc" class="param-description">
+          <p><p>Number value or Matrix to add to the Matrix object.</p>
+</p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+const m = new Matrix(3,3);
+m.set([
+   [1, 1, 1],
+   [5, 3, 2],
+   [2, 4, 4]
+]);
+m.add(1);
+m.log();
+//   [2, 2, 2]
+//   [6, 4, 3]
+//   [2, 4, 4]
+</code><code>
+const a = new Matrix(3,3);
+a.set([
+   [1, 1, 1],
+   [5, 3, 2],
+   [2, 4, 4]
+]);
+const b = new Matrix(3,3);
+b.set([
+   [1, 4, 1],
+   [2, 2, 1],
+   [2, 1, 0]
+]);
+a.add(b);
+a.log();
+//   [2, 5, 2]
+//   [7, 7, 3]
+//   [4, 5, 4]
+</code>
+</pre>
+            </div>
+
+</div><div id="method_add" class="module-wrap" >
+    <h3  class="name">add</h3>
+
+
+    <div id="desc">
+      <p><p>Add two Matrix objects together.</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name">a</code>
+            <span class="type"><span id="badge"><a href="../classes/Matrix.html" class="crosslink">Matrix</a></span></span>
+        <div id="desc" class="param-description">
+          <p><p>The first Matrix object in the operation.</p>
+</p>
+        </div>
+      </li>
+      <li id="params">
+            <code class="param-name">b</code>
+            <span class="type"><span id="badge"><a href="../classes/Matrix.html" class="crosslink">Matrix</a></span></span>
+        <div id="desc" class="param-description">
+          <p><p>The second Matrix object in the operation.</p>
+</p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+const a = new Matrix(3,3);
+a.set([
+   [4, 2, 1],
+   [2, 3, 2],
+   [1, 1, 4]
+]);
+const b = new Matrix(3,3);
+b.set([
+   [1, 4, 1],
+   [2, 2, 1],
+   [2, 1, 0]
+]);
+const c = Matrix.add(a, b);
+c.log();
+//   [5, 6, 1]
+//   [4, 5, 3]
+//   [3, 2, 4]
+</code>
+</pre>
+            </div>
+
+</div><div id="method_fillCol" class="module-wrap" >
+    <h3  class="name">fillCol</h3>
+
+
+    <div id="desc">
+      <p><p>Fill a culmn of a matrix with a value.</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name">col</code>
+            <span class="type"><span id="badge">Number</span></span>
+        <div id="desc" class="param-description">
+          <p><p>The column to fill</p>
+</p>
+        </div>
+      </li>
+      <li id="params">
+            <code class="param-name">num</code>
+            <span class="type"><span id="badge">Number</span></span>
+        <div id="desc" class="param-description">
+          <p><p>The value to fill the column with</p>
+</p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+let m = new Matrix(3, 4);
+// Fill column 3 with values of 100
+m.fillCol(3, 100);
+</code>
+</pre>
+            </div>
+
+</div><div id="method_fillRow" class="module-wrap" >
+    <h3  class="name">fillRow</h3>
+
+
+    <div id="desc">
+      <p><p>Fill a specific row in a matrix.</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name">row</code>
+            <span class="type"><span id="badge">Number</span></span>
+        <div id="desc" class="param-description">
+          <p><p>The row index to fill</p>
+</p>
+        </div>
+      </li>
+      <li id="params">
+            <code class="param-name">num</code>
+            <span class="type"><span id="badge">Number</span></span>
+        <div id="desc" class="param-description">
+          <p><p>The value to fill the row with</p>
+</p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+let m = new Matrix(3, 4);
+// Fill row 2 with values of 100
+m.fillRow(2, 100);
+</code>
+</pre>
+            </div>
+
+</div><div id="method_fromArray" class="module-wrap" >
+    <h3  class="name">fromArray</h3>
+
+
+    <div id="desc">
+      <p><p>Convert an Array into a Matrix Object</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name">array</code>
+            <span class="type"><span id="badge">Array</span></span>
+        <div id="desc" class="param-description">
+          <p><p>The array to convert into a Matrix.</p>
+</p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+let a = [1, 0, 1, 1];
+let m = Matrix.fromArray(a);
+m.log();
+</code>
+</pre>
+            </div>
+
+</div><div id="method_initiate" class="module-wrap" >
+    <h3  class="name">initiate</h3>
+
+
+    <div id="desc">
+      <p><p>Initiate a matrix with a certain value.</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name optional">[value]</code>
+            <span class="type"><span id="badge">Number</span></span>
+            <span class="flag optional" title="This parameter is optional.">optional</span>
+        <div id="desc" class="param-description">
+          <p><p>The value to initiate te Matrix with, set to 0 by default.</p>
+</p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+const m = new Matrix(2, 2);
+m.initiate(100);
+m.log();
+// [100, 100]
+// [100, 100]
+</code>
+</pre>
+            </div>
+
+</div><div id="method_insert" class="module-wrap" >
+    <h3  class="name">insert</h3>
+
+
+    <div id="desc">
+      <p><p>Set a specific value at a coordinate in the matrix.</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name">value</code>
+            <span class="type"><span id="badge">Number</span></span>
+        <div id="desc" class="param-description">
+          <p><p>The value to be inserted into the specified coordinates in the matrix</p>
+</p>
+        </div>
+      </li>
+      <li id="params">
+            <code class="param-name">x</code>
+            <span class="type"><span id="badge">Number</span></span>
+        <div id="desc" class="param-description">
+          <p><p>Row index</p>
+</p>
+        </div>
+      </li>
+      <li id="params">
+            <code class="param-name">y</code>
+            <span class="type"><span id="badge">Number</span></span>
+        <div id="desc" class="param-description">
+          <p><p>Column index</p>
+</p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+const m1 = new Matrix(3,4);
+m1.log();
+// [0, 0, 0, 0]
+// [0, 0, 0, 0]
+// [0, 0, 0, 0]
+let value = 1;
+m1.insert(value, 2, 3);
+m1.log();
+// [0, 0, 0, 0]
+// [0, 0, 0, 0]
+// [0, 0, 0, 1]
+</code>
+</pre>
+            </div>
+
+</div><div id="method_log" class="module-wrap" >
+    <h3  class="name">log</h3>
+
+
+    <div id="desc">
+      <p><p>Logs information about the matrix.</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name optional">[options]</code>
+            <span class="type"><span id="badge">Object</span></span>
+            <span class="flag optional" title="This parameter is optional.">optional</span>
+        <div id="desc" class="param-description">
+          <p><p>Object including specific properties.</p>
+</p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+const m = new Matrix(3, 6);
+// log
+m.log();
+// log as a table
+m.log({table:true});
+// log with rounded values
+m.log({decimals:3});
+</code>
+</pre>
+            </div>
+
+</div><div id="method_make" class="module-wrap" >
+    <h3  class="name">make</h3>
+
+
+    <div id="desc">
+      <p><p>Create a Number[][] matrix, all values set to 0.</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name">x</code>
+            <span class="type"><span id="badge">Number</span></span>
+        <div id="desc" class="param-description">
+          <p><p>the x component of the Number[][] matrix.</p>
+</p>
+        </div>
+      </li>
+      <li id="params">
+            <code class="param-name">y</code>
+            <span class="type"><span id="badge">Number</span></span>
+        <div id="desc" class="param-description">
+          <p><p>the y component of the Number[][] matrix.</p>
+</p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+let rawMatrix = Matrix.make(3, 4);
+console.log(rawMatrix);
+</code>
+</pre>
+            </div>
+
+</div><div id="method_map" class="module-wrap" >
+    <h3  class="name">map</h3>
+
+
+    <div id="desc">
+      <p><p>Map matrix values to a function</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name">f</code>
+            <span class="type"><span id="badge">Function</span></span>
+        <div id="desc" class="param-description">
+          <p><p>The function with which to map the matrix values.</p>
+</p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+const m = new Matrix(2, 2);
+m.initiate(4);
+m.log();
+// [4, 4]
+// [4, 4]
+m.map(x => x*x);
+m.log();
+// [16, 16]
+// [16, 16]
+</code>
+</pre>
+            </div>
+
+</div><div id="method_map" class="module-wrap" >
+    <h3  class="name">map</h3>
+
+
+    <div id="desc">
+      <p><p>Map matrix values to a function</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name">m</code>
+            <span class="type"><span id="badge">Function</span></span>
+        <div id="desc" class="param-description">
+          <p><p>The Matrix with which to apply the operation.</p>
+</p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+const m = new Matrix(2, 2);
+m.initiate(4);
+m.log();
+// [4, 4]
+// [4, 4]
+let m1 = Matrix.map(m, x => x*x*x);
+m1.log();
+// [64, 64]
+// [64, 64]
+</code>
+</pre>
+            </div>
+
+</div><div id="method_mult" class="module-wrap" >
+    <h3  class="name">mult</h3>
+
+
+    <div id="desc">
+      <p><p>Multiply a Matrix object by an other matrix or a scalar</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name">n</code>
+            <span class="type"><span id="badge"><a href="../classes/Matrix.html" class="crosslink">Matrix</a> | Number</span></span>
+        <div id="desc" class="param-description">
+          <p><p>Scalar or Matrix to multiply to the Matrix object.</p>
+</p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+const m = new Matrix(2, 2);
+m.set([
+   [1, 2],
+   [2, 3]
+]);
+m.mult(2);
+m.log();
+//  [2, 4],
+//  [4, 6]
+</code><code>
+const a = new Matrix(2, 2);
+a.set([
+   [1, 2],
+   [2, 3]
+]);
+const b = new Matrix(2, 2);
+b.set([
+   [2, 2],
+   [2, 0.5]
+]);
+a.mult(b);
+a.log();
+//  [2, 4],
+//  [4, 1.5]
+</code>
+</pre>
+            </div>
+
+</div><div id="method_mult" class="module-wrap" >
+    <h3  class="name">mult</h3>
+
+
+    <div id="desc">
+      <p><p>Matrix Multiplication, also commonly refered as Matrix dot product. The rows of B must match the columns of A.</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name">a</code>
+            <span class="type"><span id="badge"><a href="../classes/Matrix.html" class="crosslink">Matrix</a></span></span>
+        <div id="desc" class="param-description">
+          <p><p>The first matrix in the operation.</p>
+</p>
+        </div>
+      </li>
+      <li id="params">
+            <code class="param-name">b</code>
+            <span class="type"><span id="badge"><a href="../classes/Matrix.html" class="crosslink">Matrix</a></span></span>
+        <div id="desc" class="param-description">
+          <p><p>The second matrix in the operation.</p>
+</p>
+        </div>
+      </li>
+      <li id="params">
+            <code class="param-name optional">[options]</code>
+            <span class="type"><span id="badge">Object</span></span>
+            <span class="flag optional" title="This parameter is optional.">optional</span>
+        <div id="desc" class="param-description">
+          <p><p>Optional parameters.</p>
+</p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+let a = new Matrix(4, 3);
+a.set([
+  [1, 0, 1, 0],
+  [0, 1, 0, 0],
+  [0, 1, 1, 1]
+]);
+let b = new Matrix(3, 4);
+b.set([
+   [1, 0, 1],
+   [0, 1, 0],
+   [0, 1, 1],
+   [1, 0, 0]
+]);
+let c = Matrix.mult(a,b);
+c.log();
+// c.matrix is
+// [1, 1, 2]
+// [0, 1, 0]
+// [1, 2, 1]
+</code>
+</pre>
+            </div>
+
+</div><div id="method_randomize" class="module-wrap" >
+    <h3  class="name">randomize</h3>
+
+
+    <div id="desc">
+      <p><p>Randomize a Matrix Object's values</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name">min</code>
+            <span class="type"><span id="badge">Number</span></span>
+        <div id="desc" class="param-description">
+          <p><p>the minimum possible random value.</p>
+</p>
+        </div>
+      </li>
+      <li id="params">
+            <code class="param-name">max</code>
+            <span class="type"><span id="badge">Number</span></span>
+        <div id="desc" class="param-description">
+          <p><p>the maximum possible random value.</p>
+</p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+const a = new Matrix(3,3);
+a.randomize(-1, 1);
+a.log();
+</code>
+</pre>
+            </div>
+
+</div><div id="method_set" class="module-wrap" >
+    <h3  class="name">set</h3>
+
+
+    <div id="desc">
+      <p><p>Set a Matrix object.</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name">matrix</code>
+            <span class="type"><span id="badge">Number[]</span></span>
+        <div id="desc" class="param-description">
+          <p><p>A matrix with which to set the current Matrix object with.</p>
+</p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+const a = new Matrix(0,0);
+const rawMatrix = [
+   [1, 0],
+   [0, 1]
+];
+a.set(rawMatrix);
+a.log();
+</code>
+</pre>
+            </div>
+
+</div><div id="method_sub" class="module-wrap" >
+    <h3  class="name">sub</h3>
+
+
+    <div id="desc">
+      <p><p>Subtract a value or Matrix to a matrix object.</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name">n</code>
+            <span class="type"><span id="badge">Number | <a href="../classes/Matrix.html" class="crosslink">Matrix</a></span></span>
+        <div id="desc" class="param-description">
+          <p><p>Number to subtract to the matrix.</p>
+</p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+const m = new Matrix(3,3);
+m.set([
+   [1, 2, 1],
+   [2, 2, 3],
+   [2, 1, 4]
+]);
+m.sub(1);
+m.log();
+//   [0, 1, 0]
+//   [1, 1, 2]
+//   [1, 0, 3]
+</code>
+</pre>
+            </div>
+
+</div><div id="method_sub" class="module-wrap" >
+    <h3  class="name">sub</h3>
+
+
+    <div id="desc">
+      <p><p>Subtract two Matrix objects together.</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name">a</code>
+            <span class="type"><span id="badge"><a href="../classes/Matrix.html" class="crosslink">Matrix</a></span></span>
+        <div id="desc" class="param-description">
+          <p><p>The first Matrix object in the operation.</p>
+</p>
+        </div>
+      </li>
+      <li id="params">
+            <code class="param-name">b</code>
+            <span class="type"><span id="badge"><a href="../classes/Matrix.html" class="crosslink">Matrix</a></span></span>
+        <div id="desc" class="param-description">
+          <p><p>The second Matrix object in the operation.</p>
+</p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+const a = new Matrix(3,3);
+a.set([
+   [4, 2, 1],
+   [2, 3, 2],
+   [1, 1, 4]
+]);
+const b = new Matrix(3,3);
+b.set([
+   [1, 4, 1],
+   [2, 2, 1],
+   [2, 1, 0]
+]);
+const c = Matrix.sub(a, b);
+c.log();
+//   [3, -2, 0]
+//   [0,  1, 1]
+//   [-1, 0, 4]
+</code>
+</pre>
+            </div>
+
+</div><div id="method_toArray" class="module-wrap" >
+    <h3  class="name">toArray</h3>
+
+
+    <div id="desc">
+      <p><p>Convert a (1 by n) or (n by 1) Matrix object to an array.</p>
+</p>
+    </div>
+      <ul id="param-list">
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+let m = new Matrix(4, 1);
+let a = m.toArray();
+console.log(a);
+</code>
+</pre>
+            </div>
+
+</div><div id="method_toArray" class="module-wrap" >
+    <h3  class="name">toArray</h3>
+
+
+    <div id="desc">
+      <p><p>Convert a (1 by n) or (n by 1) Matrix object to an array.</p>
+</p>
+    </div>
+      <ul id="param-list">
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+let m = new Matrix(4, 1);
+let a = Matrix.toArray(m);
+console.log(a);
+</code>
+</pre>
+            </div>
+
+</div><div id="method_transpose" class="module-wrap" >
+    <h3  class="name">transpose</h3>
+
+
+    <div id="desc">
+      <p><p>Transpose operation of a matrix. Invert row coordinates with column coordinates</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name">m</code>
+            <span class="type"><span id="badge"><a href="../classes/Matrix.html" class="crosslink">Matrix</a></span></span>
+        <div id="desc" class="param-description">
+          <p><p>The matrix to be transposed.</p>
+</p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+const m1 = new Matrix(2,4);
+m1.log({table:true});
+const m2 = Matrix.transpose(m1);
+m2.log({table:true});
+</code>
+</pre>
+            </div>
+
+</div>    </div>
+
+  </div>
+
+</div>        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

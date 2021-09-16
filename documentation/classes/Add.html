@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Multiple examples & descriptions on the usage of the library's methods & constructors. Learn how to Create, Train & Use your Deep Neural Networks!" />
+  <meta name="author" content="Matias Vazquez-Levi" />
+  <meta name="keywords" content="Dann, Dannjs, js, nn, nn js, javascript, ai, ml, dnn, deep neural network, neural network, dnnjs, library, machine learning, documentation, docs, examples, example,wiki" />
+
+
+  <title>Dannjs | Documentation</title>
+  <link rel="stylesheet" href="../assets/css/highlight.css" id="site_styles">
+  <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+  <!-- Google Tag Manager -->
+  <!-- <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PT2SZHT');
+  </script> -->
+  <!-- End Google Tag Manager -->
+  <link rel="shortcut icon" type="image/png" href="../assets/favicon.ico">
+  <script src="../assets/js/hljs.min.js"></script>
+  <script>
+    hljs.configure({
+      languages: ['js']
+    });
+    hljs.highlightAll();
+  </script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PT2SZHT"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+  <!-- End Google Tag Manager (noscript) -->
+  <div id="doc">
+    <header class="main-header">
+      <div class="content">
+        <a href="../index.html">
+          <div class="project-title">
+ 
+            <h1 class="project-name">Dannjs</h1> <span class="project-version">2.3.13</span>  
+            <p class="description">Deep Neural Network Library for JavaScript.</p>
+          </div>
+        </a>
+        <ul class="jump-links">
+          <li><a href="#top" class="top-jump-link">top</a></li>
+        </ul>
+      </div>
+    </header>
+    <div id="bd" class="main-body">
+
+      <div id="docs-sidebar" class="sidebar apidocs">
+      </div>
+
+      <div id="docs-main" class="apidocs">
+        <div id ="content-main" class="content container">
+
+
+<div id="top">
+  <a href="../index.html">
+    <div class="back">
+      <img src="../assets/arrow.svg" alt="" id="backImg" width="25%">
+    </div>
+  </a>
+  <h1 class="main-title">Add Class</h1>
+
+</div>
+
+<div id="bottom">
+
+  <div id="main-box">
+    <div id="table-contents">
+      <div class="module-wrap side" id="Add">
+        <ul class="content-table">
+
+
+
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_activation">activation</a>
+
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_loss">loss</a>
+
+                </li>
+
+
+
+          
+
+          
+      <ul>
+    </div>
+    </div>
+
+    <div id="methods-wrap">
+<div id="method_activation" class="module-wrap" >
+    <h3  class="name">activation</h3>
+
+
+    <div id="desc">
+      <p><p>Add a custom activation function.</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name">name</code>
+            <span class="type"><span id="badge">String</span></span>
+        <div id="desc" class="param-description">
+          <p><p>the name of the new activation function.</p>
+</p>
+        </div>
+      </li>
+      <li id="params">
+            <code class="param-name">activation</code>
+            <span class="type"><span id="badge">Function</span></span>
+        <div id="desc" class="param-description">
+          <p><p>the activation function.</p>
+</p>
+        </div>
+      </li>
+      <li id="params">
+            <code class="param-name">derivative</code>
+            <span class="type"><span id="badge">Function</span></span>
+        <div id="desc" class="param-description">
+          <p><p>the derivative of this activation function.</p>
+</p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+Add.activation('myfunc',
+  (x) => {
+    if (x <= 0) {
+      return 0;
+    } else {
+      return 1;
+    }
+  },
+  (x) => {
+    return 0;
+  }
+);
+let nn = new Dann();
+nn.outputActivation('myfunc');
+nn.log();
+</code>
+</pre>
+            </div>
+
+</div><div id="method_loss" class="module-wrap" >
+    <h3  class="name">loss</h3>
+
+
+    <div id="desc">
+      <p><p>Add a custom loss function.</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name">name</code>
+            <span class="type"><span id="badge">String</span></span>
+        <div id="desc" class="param-description">
+          <p><p>the name of the new loss function.</p>
+</p>
+        </div>
+      </li>
+      <li id="params">
+            <code class="param-name">loss</code>
+            <span class="type"><span id="badge">Function</span></span>
+        <div id="desc" class="param-description">
+          <p><p>the loss function.</p>
+</p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+Add.loss('myfunc',
+  (predictions, target) => {
+    let sum = 0;
+    let ans = 0;
+    let n = target.length;
+    for (let i = 0; i < n; i++) {
+      let y = target[i];
+      let yHat = predictions[i];
+      sum += abs(y - yHat);
+    }
+    ans = sum / n;
+    return ans;
+  }
+);
+let nn = new Dann();
+nn.setLossFunction('myfunc');
+nn.log();
+</code>
+</pre>
+            </div>
+
+</div>    </div>
+
+  </div>
+
+</div>        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

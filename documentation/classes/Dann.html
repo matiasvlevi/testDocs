@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Multiple examples & descriptions on the usage of the library's methods & constructors. Learn how to Create, Train & Use your Deep Neural Networks!" />
+  <meta name="author" content="Matias Vazquez-Levi" />
+  <meta name="keywords" content="Dann, Dannjs, js, nn, nn js, javascript, ai, ml, dnn, deep neural network, neural network, dnnjs, library, machine learning, documentation, docs, examples, example,wiki" />
+
+
+  <title>Dannjs | Documentation</title>
+  <link rel="stylesheet" href="../assets/css/highlight.css" id="site_styles">
+  <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+  <!-- Google Tag Manager -->
+  <!-- <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PT2SZHT');
+  </script> -->
+  <!-- End Google Tag Manager -->
+  <link rel="shortcut icon" type="image/png" href="../assets/favicon.ico">
+  <script src="../assets/js/hljs.min.js"></script>
+  <script>
+    hljs.configure({
+      languages: ['js']
+    });
+    hljs.highlightAll();
+  </script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PT2SZHT"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+  <!-- End Google Tag Manager (noscript) -->
+  <div id="doc">
+    <header class="main-header">
+      <div class="content">
+        <a href="../index.html">
+          <div class="project-title">
+ 
+            <h1 class="project-name">Dannjs</h1> <span class="project-version">2.3.13</span>  
+            <p class="description">Deep Neural Network Library for JavaScript.</p>
+          </div>
+        </a>
+        <ul class="jump-links">
+          <li><a href="#top" class="top-jump-link">top</a></li>
+        </ul>
+      </div>
+    </header>
+    <div id="bd" class="main-body">
+
+      <div id="docs-sidebar" class="sidebar apidocs">
+      </div>
+
+      <div id="docs-main" class="apidocs">
+        <div id ="content-main" class="content container">
+
+
+<div id="top">
+  <a href="../index.html">
+    <div class="back">
+      <img src="../assets/arrow.svg" alt="" id="backImg" width="25%">
+    </div>
+  </a>
+  <h1 class="main-title">Dann Class</h1>
+
+</div>
+
+<div id="bottom">
+
+  <div id="main-box">
+    <div id="table-contents">
+      <div class="module-wrap side" id="Dann">
+        <ul class="content-table">
+
+
+
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_addHiddenLayer">addHiddenLayer</a>
+
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_backpropagate">backpropagate</a>
+
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_createFromJSON">createFromJSON</a>
+
+                        <span class="flag static">static</span>
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_feedForward">feedForward</a>
+
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_fromJSON">fromJSON</a>
+
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_log">log</a>
+
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_makeWeights">makeWeights</a>
+
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_mapWeights">mapWeights</a>
+
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_mutateAdd">mutateAdd</a>
+
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_mutateRandom">mutateRandom</a>
+
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_outputActivation">outputActivation</a>
+
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_setLossFunction">setLossFunction</a>
+
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_toFunction">toFunction</a>
+
+                </li>
+                <li class="index-item method">
+                    <a class="no-underline" href="#method_toJSON">toJSON</a>
+
+                </li>
+
+
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+      <ul>
+    </div>
+    </div>
+
+    <div id="methods-wrap">
+<div id="method_addHiddenLayer" class="module-wrap" >
+    <h3  class="name">addHiddenLayer</h3>
+
+
+    <div id="desc">
+      <p><p>Add a Hidden Neuron Layer to a Dann neural network.</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name">size</code>
+            <span class="type"><span id="badge">Number</span></span>
+        <div id="desc" class="param-description">
+          <p><p>Layer size, the number of neurons in the layer.</p>
+</p>
+        </div>
+      </li>
+      <li id="params">
+            <code class="param-name optional">[act]</code>
+            <span class="type"><span id="badge">String</span></span>
+            <span class="flag optional" title="This parameter is optional.">optional</span>
+        <div id="desc" class="param-description">
+          <p><p>Takes a string of the activation function's name. If left empty, the activation function will be set to 'sigmoid' by default. See available activation functions below.</p>
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Desmos</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Sigmoid</td>
+    <td><a target="_blank" href="https://www.desmos.com/calculator/so8eiigug4">See graph</a></td>
+  </tr>
+  <tr>
+    <td>leakyReLU</td>
+    <td><a target="_blank" href="https://www.desmos.com/calculator/pxqqqxd3tz">See graph</a></td>
+  </tr>
+  <tr>
+    <td>reLU</td>
+    <td><a target="_blank" href="https://www.desmos.com/calculator/jdb8dfof6x">See graph</a></td>
+  </tr>
+  <tr>
+    <td>siLU</td>
+    <td><a target="_blank" href="https://www.desmos.com/calculator/f4nhtck5dr">See graph</a></td>
+  </tr>
+  <tr>
+    <td>tanH</td>
+    <td><a target="_blank" href="https://www.desmos.com/calculator/eai4bialus">See graph</a></td>
+  </tr>
+  <tr>
+    <td>binary</td>
+    <td><a target="_blank" href="https://www.desmos.com/calculator/zq8s1ixyp8">See graph</a></td>
+  </tr>
+  <tr>
+    <td>softsign</td>
+    <td><a target="_blank" href="https://www.desmos.com/calculator/vmuhohc3da">See graph</a></td>
+  </tr>
+  <tr>
+    <td>sinc</td>
+    <td><a target="_blank" href="https://www.desmos.com/calculator/6u4ioz8lhs">See graph</a></td>
+  </tr>
+  <tr>
+    <td>softplus</td>
+    <td><a target="_blank" href="https://www.desmos.com/calculator/aegpfcyniu">See graph</a></td>
+  </tr>
+</tbody>
+</table>
+<a href="./Add.html#method_activation"><p>See how to add more </p></a></p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+const nn = new Dann(10, 2);
+//Add a layer
+nn.addHiddenLayer(8, 'sigmoid');
+//console log
+console.log('Added first hidden layer: ');
+nn.log({struct:true});
+//Add a layer
+nn.addHiddenLayer(4, 'tanH');
+//console log
+console.log('Added a second hidden layer: ');
+nn.log({struct:true});
+</code>
+</pre>
+            </div>
+
+</div><div id="method_backpropagate" class="module-wrap" >
+    <h3  class="name">backpropagate</h3>
+
+
+    <div id="desc">
+      <p><p>Backpropagate through a Dann model in order to train the weights.</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name">inputs</code>
+            <span class="type"><span id="badge">Array</span></span>
+        <div id="desc" class="param-description">
+          <p><p>Array of input data.</p>
+</p>
+        </div>
+      </li>
+      <li id="params">
+            <code class="param-name">target</code>
+            <span class="type"><span id="badge">Array</span></span>
+        <div id="desc" class="param-description">
+          <p><p>Array of expected output.</p>
+</p>
+        </div>
+      </li>
+      <li id="params">
+            <code class="param-name optional">[options]</code>
+            <span class="type"><span id="badge">Object</span></span>
+            <span class="flag optional" title="This parameter is optional.">optional</span>
+        <div id="desc" class="param-description">
+          <p><p>Object including specific properties.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>log</td>
+<td>Boolean</td>
+<td>If set to true, it will log a report in the console.</td>
+</tr>
+<tr>
+<td>table</td>
+<td>Boolean</td>
+<td>If the &#39;log&#39; option is set to true, setting this value to true will print the arrays of this function in tables.</td>
+</tr>
+<tr>
+<td>dropout</td>
+<td>Number</td>
+<td>A value ranging from 0 to 1 determining the chance of a neuron being idle during a backward pass.</td>
+</tr>
+</tbody>
+</table></p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+const nn = new Dann(2, 1);
+nn.addHiddenLayer(8);
+nn.makeWeights();
+// Train 1000 epoch
+for (let i = 0; i < 1000; i++) {
+   nn.backpropagate([0,0],[0]);
+   nn.backpropagate([1,0],[1]);
+   nn.backpropagate([0,1],[1]);
+   nn.backpropagate([1,1],[0]);
+}
+</code>
+</pre>
+            </div>
+
+</div><div id="method_createFromJSON" class="module-wrap" >
+    <h3  class="name">createFromJSON</h3>
+
+
+    <div id="desc">
+      <p><p>Creates a Dann model from a json object.</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name">data</code>
+            <span class="type"><span id="badge">Object</span></span>
+        <div id="desc" class="param-description">
+          <p><p>model data json object, you can get this object from a yourmodel.toJSON(); See docs <a href="https://dannjs.org">here</a>.</p>
+</p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+const nn = new Dann(24, 4);
+nn.addHiddenLayer(12, 'sigmoid');
+nn.makeWeights();
+const modelData = nn.toJSON();
+const newNN = Dann.createFromJSON(modelData);
+newNN.log();
+</code>
+</pre>
+            </div>
+
+</div><div id="method_feedForward" class="module-wrap" >
+    <h3  class="name">feedForward</h3>
+
+
+    <div id="desc">
+      <p><p>Feed data through the model to obtain an output or prediction.</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name">inputs</code>
+            <span class="type"><span id="badge">Array</span></span>
+        <div id="desc" class="param-description">
+          <p><p>Array of input data.</p>
+</p>
+        </div>
+      </li>
+      <li id="params">
+            <code class="param-name optional">[options]</code>
+            <span class="type"><span id="badge">Object</span></span>
+            <span class="flag optional" title="This parameter is optional.">optional</span>
+        <div id="desc" class="param-description">
+          <p><p>Object including specific properties.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>log</td>
+<td>Boolean</td>
+<td>If set to true, it will log a report in the console.</td>
+</tr>
+<tr>
+<td>table</td>
+<td>Boolean</td>
+<td>If the &#39;log&#39; option is set to true, setting this value to true will print the arrays of this function in tables.</td>
+</tr>
+<tr>
+<td>decimals</td>
+<td>Integer</td>
+<td>If used, the output of this function will be rounded to the number of decimals specified.</td>
+</tr>
+</tbody>
+</table></p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+const nn = new Dann(4, 2);
+nn.makeWeights();
+let prediction = nn.feedForward([0,0,0,1], {log:true});
+//outputs an array of length 2
+console.log(prediction);
+</code>
+</pre>
+            </div>
+
+</div><div id="method_fromJSON" class="module-wrap" >
+    <h3  class="name">fromJSON</h3>
+
+
+    <div id="desc">
+      <p><p>Applies a json object to a Dann model.</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name">data</code>
+            <span class="type"><span id="badge">Object</span></span>
+        <div id="desc" class="param-description">
+          <p><p>model data json object, you can get this object from a yourmodel.toJSON(); See docs <a href="https:/dannjs.org">here</a>.</p>
+</p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+const nn = new Dann(24,4);
+nn.addHiddenLayer(18,'tanH');
+nn.addHiddenLayer(12,'sigmoid');
+nn.makeWeights();
+const modelData = nn.toJSON();
+const newNN = new Dann();
+newNN.fromJSON(modelData);
+newNN.log();
+</code>
+</pre>
+            </div>
+
+</div><div id="method_log" class="module-wrap" >
+    <h3  class="name">log</h3>
+
+
+    <div id="desc">
+      <p><p>Displays information about the model in the console.</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name optional">[options]</code>
+            <span class="type"><span id="badge">Object</span></span>
+            <span class="flag optional" title="This parameter is optional.">optional</span>
+        <div id="desc" class="param-description">
+          <p><p>An object including specific properties.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>details</td>
+<td>Boolean</td>
+<td>If set to true, the function will log more advanced details about the model.</td>
+</tr>
+<tr>
+<td>decimals</td>
+<td>integer</td>
+<td>The number of decimals the logged data is going to have. It is set to 3 by default.</td>
+</tr>
+<tr>
+<td>table</td>
+<td>Boolean</td>
+<td>Whether or not we want to print our matrices in the form of a table or Matrix object log.</td>
+</tr>
+<tr>
+<td>gradients</td>
+<td>Boolean</td>
+<td>If this is set to true, the the function will log the gradients of the model.</td>
+</tr>
+<tr>
+<td>biases</td>
+<td>Boolean</td>
+<td>If this is set to true, the the function will log the biases of the model.</td>
+</tr>
+<tr>
+<td>weights</td>
+<td>Boolean</td>
+<td>If this is set to true, the the function will log the weights of the model.</td>
+</tr>
+<tr>
+<td>struct</td>
+<td>Boolean</td>
+<td>If this is set to true, the the function will log the structure of the model.</td>
+</tr>
+<tr>
+<td>errors</td>
+<td>Boolean</td>
+<td>If this is set to true, the the function will log the errors of the model.</td>
+</tr>
+<tr>
+<td>misc</td>
+<td>Boolean</td>
+<td>If this is set to true, the the function will log the loss of the model, the learning rate of the model and the loss function.</td>
+</tr>
+</tbody>
+</table></p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+const nn = new Dann(24, 2);
+nn.log();
+</code>
+</pre>
+            </div>
+
+</div><div id="method_makeWeights" class="module-wrap" >
+    <h3  class="name">makeWeights</h3>
+
+
+    <div id="desc">
+      <p><p>Creates the weights. This function should be called after all the hidden layers were added. The optional parameters determine the range in which starting weights are going to be set randomly. If no arguments are specified, weights are going to be set in between -1 and 1.</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name optional">[arg1]</code>
+            <span class="type"><span id="badge">Number</span></span>
+            <span class="flag optional" title="This parameter is optional.">optional</span>
+        <div id="desc" class="param-description">
+          <p><p>The minimum range value.</p>
+</p>
+        </div>
+      </li>
+      <li id="params">
+            <code class="param-name optional">[arg2]</code>
+            <span class="type"><span id="badge">Number</span></span>
+            <span class="flag optional" title="This parameter is optional.">optional</span>
+        <div id="desc" class="param-description">
+          <p><p>The maximum range value.</p>
+</p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+const nn = new Dann(2, 2);
+// initiate the Weights
+nn.makeWeights();
+// log weights
+nn.log({weights:true, table:true});
+// add a layer & re-initiate weights in a range of (-0.1, 0.1)
+nn.addHiddenLayer(4, 'sigmoid');
+nn.makeWeights(-0.1, 0.1);
+// log weights
+console.log('New re-initiated weights:');
+nn.log({weights:true, table:true});
+</code>
+</pre>
+            </div>
+
+</div><div id="method_mapWeights" class="module-wrap" >
+    <h3  class="name">mapWeights</h3>
+
+
+    <div id="desc">
+      <p><p>This method maps the weights of a Dann model. It is usefull for neuroevolution simulations where you would map the weights with an equation containing a random factor.</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name">f</code>
+            <span class="type"><span id="badge">Function</span></span>
+        <div id="desc" class="param-description">
+          <p><p>the function to map the weights with.</p>
+</p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+const nn = new Dann(2, 2);
+nn.makeWeights(-1, 1);
+nn.log({weights:true});
+nn.mapWeights((x)=>{
+  return (Math.random()*0.1)+x;
+});
+nn.log({weights:true})
+</code>
+</pre>
+            </div>
+
+</div><div id="method_mutateAdd" class="module-wrap" >
+    <h3  class="name">mutateAdd</h3>
+
+
+    <div id="desc">
+      <p><p>This function mutates the weights by taking a percentage of the weight &amp; adding it to the weight. This is for Neuroevolution tasks.</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name">randomFactor</code>
+            <span class="type"><span id="badge">Number</span></span>
+        <div id="desc" class="param-description">
+          <p><p>Percentage to add to each weight. Generally in 0 and 1.</p>
+</p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+const nn = new Dann(4, 2);
+nn.makeWeights();
+nn.log({weights:true, table:true})
+// weights add 5% of themselves.
+nn.mutateAdd(0.05);
+nn.log({weights:true,table:true});
+</code>
+</pre>
+            </div>
+
+</div><div id="method_mutateRandom" class="module-wrap" >
+    <h3  class="name">mutateRandom</h3>
+
+
+    <div id="desc">
+      <p><p>This function mutates each weights randomly. This is for Neuroevolution tasks.</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name">range</code>
+            <span class="type"><span id="badge">Number</span></span>
+        <div id="desc" class="param-description">
+          <p><p>This will multiply with a random number from -range to range and add to each weight.</p>
+</p>
+        </div>
+      </li>
+      <li id="params">
+            <code class="param-name optional">[probability]</code>
+            <span class="type"><span id="badge">Number</span></span>
+            <span class="flag optional" title="This parameter is optional.">optional</span>
+        <div id="desc" class="param-description">
+          <p><p>The probability of a weight being affected by a random mutation. Ranging from 0 to 1. Setting this value to 1 would mutate all the model's weights.</p>
+</p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+const nn = new Dann(4, 2);
+nn.makeWeights();
+nn.log({weights:true, table:true});
+// adding (weight*random(-0.1, 0.1)) to 50% of the weights.
+nn.mutateRandom(0.1, 0.5);
+nn.log({weights:true, table:true});
+</code>
+</pre>
+            </div>
+
+</div><div id="method_outputActivation" class="module-wrap" >
+    <h3  class="name">outputActivation</h3>
+
+
+    <div id="desc">
+      <p><p>Sets the activation function of the output.</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name">act</code>
+            <span class="type"><span id="badge">String</span></span>
+        <div id="desc" class="param-description">
+          <p><p>Takes a string of the activation function's name. If this function is not called, the activation function will be set to 'sigmoid' by default. See available activation functions <a target="_blank" href="https://dannjs.org">here</a>.</p>
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Desmos</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Sigmoid</td>
+    <td><a target="_blank" href="https://www.desmos.com/calculator/so8eiigug4">See graph</a></td>
+  </tr>
+  <tr>
+    <td>leakyReLU</td>
+    <td><a target="_blank" href="https://www.desmos.com/calculator/pxqqqxd3tz">See graph</a></td>
+  </tr>
+  <tr>
+    <td>reLU</td>
+    <td><a target="_blank" href="https://www.desmos.com/calculator/jdb8dfof6x">See graph</a></td>
+  </tr>
+  <tr>
+    <td>siLU</td>
+    <td><a target="_blank" href="https://www.desmos.com/calculator/f4nhtck5dr">See graph</a></td>
+  </tr>
+  <tr>
+    <td>tanH</td>
+    <td><a target="_blank" href="https://www.desmos.com/calculator/eai4bialus">See graph</a></td>
+  </tr>
+  <tr>
+    <td>binary</td>
+    <td><a target="_blank" href="https://www.desmos.com/calculator/zq8s1ixyp8">See graph</a></td>
+  </tr>
+  <tr>
+    <td>softsign</td>
+    <td><a target="_blank" href="https://www.desmos.com/calculator/vmuhohc3da">See graph</a></td>
+  </tr>
+  <tr>
+    <td>sinc</td>
+    <td><a target="_blank" href="https://www.desmos.com/calculator/6u4ioz8lhs">See graph</a></td>
+  </tr>
+  <tr>
+    <td>softplus</td>
+    <td><a target="_blank" href="https://www.desmos.com/calculator/aegpfcyniu">See graph</a></td>
+  </tr>
+</tbody>
+</table>
+<a href="./Add.html#method_activation"><p>See how to add more </p></a></p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+const nn = new Dann(4, 2);
+nn.addHiddenLayer(8, 'sigmoid');
+nn.makeWeights();
+console.log('Before changing the output activation');
+nn.log({struct:true});
+nn.outputActivation('tanH');
+console.log('After changing the output activation');
+nn.log({struct:true});
+</code>
+</pre>
+            </div>
+
+</div><div id="method_setLossFunction" class="module-wrap" >
+    <h3  class="name">setLossFunction</h3>
+
+
+    <div id="desc">
+      <p><p>Set the loss function of a Dann model</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name">name</code>
+            <span class="type"><span id="badge">String</span></span>
+        <div id="desc" class="param-description">
+          <p><p>Takes a string of the loss function's name. If this function is not called, the loss function will be set to 'mse' by default. See available loss functions <a target="_blank" href="dannjs.org">Here</a>.</p>
+</p>
+        </div>
+      </li>
+      <li id="params">
+            <code class="param-name optional">[percentile]</code>
+            <span class="type"><span id="badge">Number</span></span>
+            <span class="flag optional" title="This parameter is optional.">optional</span>
+        <div id="desc" class="param-description">
+          <p><p>Some loss functions like the Quantile loss will need a percentile value. Ranges between 0 and 1.</p>
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Desmos</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>mse</td>
+    <td><a target="_blank" href="https://www.desmos.com/calculator/msg3bebyhe">See graph</a></td>
+  </tr>
+  <tr>
+    <td>mae</td>
+    <td><a target="_blank" href="https://www.desmos.com/calculator/sqyudacjzb">See graph</a></td>
+  </tr>
+  <tr>
+    <td>lcl</td>
+    <td><a target="_blank" href="https://www.desmos.com/calculator/ropuc3y6sa">See graph</a></td>
+  </tr>
+  <tr>
+    <td>mbe</td>
+    <td><a target="_blank" href="https://www.desmos.com/calculator/xzp1hr0vin">See graph</a></td>
+  </tr>
+  <tr>
+    <td>mael</td>
+    <td><a target="_blank" href="https://www.desmos.com/calculator/dimqieesut">See graph</a></td>
+  </tr>
+  <tr>
+    <td>rmse</td>
+    <td><a target="_blank" href="https://www.desmos.com/calculator/x7efwdfada">See graph</a></td>
+  </tr>
+  <tr>
+    <td>mce</td>
+    <td><a target="_blank" href="https://www.desmos.com/calculator/bzlqe7bafx">See graph</a></td>
+  </tr>
+  <tr>
+    <td>bce</td>
+    <td><a target="_blank" href="https://www.desmos.com/calculator/ri1bj9gw4l">See graph</a></td>
+  </tr>
+  <tr>
+    <td>quantile</td>
+    <td><a target="_blank" href="https://www.desmos.com/calculator/7rsvaivrat">See graph</a></td>
+  </tr>
+</tbody>
+</table>
+<a href="./Add.html#method_loss"><p>See how to add more </p></a></p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+const nn = new Dann(4, 2);
+nn.addHiddenLayer(8, 'sigmoid');
+nn.makeWeights();
+//Before changing the loss function
+console.log(nn.lossfunc);
+nn.setLossFunction('mael');
+//After changing the loss function
+console.log(nn.lossfunc);
+</code><code>
+const nn = new Dann(4, 4);
+nn.addHiddenLayer(16, 'sigmoid');
+nn.makeWeights();
+//Before changing the loss function
+console.log(nn.lossfunc);
+// Quantile loss with 40 percentile
+nn.setLossFunction('quantile', 0.4);
+//After changing the loss function
+console.log(nn.lossfunc);
+</code>
+</pre>
+            </div>
+
+</div><div id="method_toFunction" class="module-wrap" >
+    <h3  class="name">toFunction</h3>
+
+
+    <div id="desc">
+      <p><p>This method allows for a Dann model to be converted into a minified javascript function that can run independently, which means you don't need to import the library for it to work. The function generated acts as a Dann.feedForward().</p>
+</p>
+    </div>
+      <ul id="param-list">
+      <li id="params">
+            <code class="param-name optional">[name]</code>
+            <span class="type"><span id="badge">String</span></span>
+            <span class="flag optional" title="This parameter is optional.">optional</span>
+        <div id="desc" class="param-description">
+          <p><p>the name of the function, set to 'myDannFunction' by default.</p>
+</p>
+        </div>
+      </li>
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+const nn = new Dann(4, 4);
+nn.addHiddenLayer(8);
+nn.makeWeights();
+let stringFunction = nn.toFunction();
+// Copy & paste the string function!
+console.log(stringFunction);
+</code>
+</pre>
+            </div>
+
+</div><div id="method_toJSON" class="module-wrap" >
+    <h3  class="name">toJSON</h3>
+
+
+    <div id="desc">
+      <p><p>Gets a dannData object.</p>
+</p>
+    </div>
+      <ul id="param-list">
+
+
+
+      </ul>
+
+
+            <div class="example">
+            <code class="param-name optional">Example</code>
+<pre id="code-area">
+<code>
+const nn = new Dann(24, 4);
+nn.addHiddenLayer(12, 'sigmoid');
+nn.makeWeights();
+// Getting json
+const modelData = nn.toJSON();
+const newNN = new Dann();
+// Setting
+newNN.fromJSON(modelData);
+newNN.log();
+</code>
+</pre>
+            </div>
+
+</div>    </div>
+
+  </div>
+
+</div>        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

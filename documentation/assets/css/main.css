@@ -1,0 +1,493 @@
+@font-face {
+  font-family: 'light';
+  src: URL('../fonts/Comfortaa-Light.ttf') format("truetype");
+}
+
+::-webkit-scrollbar {
+  /* display: none; */
+  width: 12px;
+  /* color: var(--darkbackground); */
+}
+
+::-webkit-scrollbar-track {
+  /* display: none; */
+  background-color: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  /* display: none; */
+  background-color: var(--main);
+}
+
+:root {
+  --bg: #383e56;
+  --dark: #2d3245;
+  --main: #f69e7b;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+html,
+body,
+#doc {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.hljs {
+  white-space: pre-wrap;
+  line-break: normal;
+  margin: 0px;
+  margin-bottom: 2rem;
+}
+
+#doc,
+#bd,
+#docs-main,
+#content-main,
+#main-index-content {
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+p {
+  font-size: 20px;
+  color: var(--main);
+  font-family: "Sans Mono", "Consolas", "Courier", monospace;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0px;
+  color: var(--main);
+  font-family: 'light';
+  font-weight: bold;
+}
+
+h4 {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+h2 {
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  font-size: 1.6rem;
+}
+
+#params {
+  margin: 8rem 0rem;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+#class-Add {
+  display: none;
+}
+
+#backImg {
+  display: block;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+.main-title {
+  margin-left: 4%;
+  position: absolute;
+  bottom: 0;
+}
+
+.main-header {
+  width: 100%;
+  height: 0%;
+  display: none;
+}
+
+.param-description {
+  color: var(--main);
+  font-family: "Sans Mono", "Consolas", "Courier", monospace
+}
+
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.item code,
+.item code,
+.default-value {
+  font-family: Consolas, Menlo, "Courier New", monospace;
+  color: var(--main);
+}
+
+#top {
+  background-color: var(--bg);
+  min-width: 100%;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: stretch;
+  position: relative;
+}
+
+#bottom {
+  background-color: var(--dark);
+  min-width: 100%;
+  min-height: 92%;
+}
+
+
+/* Mobile phone vertical */
+
+@media only screen and (min-width: 480px) {
+  .flag {
+    border-radius: 24px;
+    background-color: var(--bg);
+    color: var(--dark);
+    font-weight: bold;
+    font-family: Consolas, Menlo, "Courier New", monospace;
+  }
+  p {
+    font-size: 18px;
+  }
+  .type {
+    position: relative;
+    top: -3px;
+    border-radius: 16px;
+    background-color: var(--dark);
+    color: var(--main);
+    font-weight: bold;
+    font-size: 80%;
+    font-family: Consolas, Menlo, "Courier New", monospace;
+    padding: 0.25em;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    margin: 0.25em;
+  }
+  h1 {
+    font-size: 178px;
+  }
+  h3 {
+    font-size: 52px;
+  }
+  .param-name {
+    margin-top: 6rem;
+  }
+  #top {
+    width: 100%;
+    height: 40%;
+    min-height: 40%;
+    border: 2px solid var(--bg)
+  }
+  #bottom {
+    width: 100%;
+    min-height: 60%;
+    height: fit-content;
+    border: 2px solid var(--dark)
+  }
+  .main-title {
+    padding-top: 0%;
+    float: left;
+    line-break: strict;
+    max-width: 80%;
+  }
+  #sidebar {
+    display: none;
+  }
+  h3 {
+    font-size: 72px;
+    margin-top: 0.5rem;
+    margin-bottom: 7.5rem;
+  }
+  p {
+    font-size: 48px;
+  }
+  #main-box {
+    height: 100%;
+    width: 94%;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding-top: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  .module-wrap {
+    background-color: var(--bg);
+    min-height: 20%;
+    margin-bottom: 14%;
+    padding: 2.4rem;
+    border-radius: 18px;
+    min-width: 90%;
+  }
+  #desc {
+    max-width: 100em;
+  }
+  td {
+    padding: 1.25em;
+  }
+  th {
+    padding: 1.25em;
+  }
+  table {
+    margin-top: 20%;
+    min-width: 100%;
+  }
+  a {
+    color: var(--main);
+  }
+  .no-underline {
+    text-decoration: none;
+  }
+  table,
+  th,
+  td {
+    border: 1px solid var(--dark);
+    color: var(--main);
+    font-size: 36px;
+    font-family: 'light';
+  }
+  #param-list {
+    font-weight: lighter;
+    font-size: 48px;
+  }
+  .param-name {
+    color: var(--main);
+    margin-top: 2rem;
+    font-size: 3.6rem;
+  }
+  .param .type {
+    margin-left: 0.8em;
+  }
+  li {
+    color: var(--main);
+    font-size: 52px;
+    font-family: 'light';
+    text-decoration: none;
+    margin-left: none;
+  }
+  li:first-child {
+    margin-top: 3rem;
+  }
+  li:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  #table-contents {
+    min-width: 100%;
+  }
+  .back {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 8%;
+    left: 5%;
+  }
+  .main-body {
+    width: 100%;
+    height: 100%;
+  }
+  #readme {
+    display: none;
+  }
+}
+
+
+/* Desktop */
+
+@media only screen and (min-width: 1092px) {
+  .js {
+    font-size: 14px;
+  }
+  #top {
+    width: 100%;
+    height: 18%;
+    min-height: 18%;
+  }
+  .param-description {
+    font-size: 14px;
+  }
+  #bottom {
+    width: 60%;
+    min-height: 100%;
+    height: fit-content;
+    display: flex;
+  }
+  p {
+    font-size: 14px;
+  }
+  td {
+    padding: 1em;
+  }
+  th {
+    padding: 1em;
+  }
+  table {
+    margin-top: 2rem;
+    min-width: 100%;
+  }
+  li:first-child {
+    margin-top: 1.4rem;
+  }
+  li:not(:last-child) {
+    margin-bottom: 1.4rem;
+  }
+  table,
+  th,
+  td {
+    border: 1px solid var(--dark);
+    color: var(--main);
+    font-size: 12px;
+    font-family: 'light';
+  }
+  #params {
+    margin: 3rem 0rem;
+  }
+  .main-title {
+    padding-top: 0%;
+    margin-left: 10%;
+  }
+  .back {
+    width: 12%;
+    height: 12%;
+    position: absolute;
+    top: 50%;
+    left: 3%;
+  }
+  h1 {
+    font-size: 100px;
+  }
+  h3 {
+    font-size: 24px;
+    margin-bottom: 2rem;
+  }
+  .param-name {
+    margin-top: 3rem;
+    font-size: 18px;
+  }
+  .main-body {
+    width: 60%;
+    height: 100%;
+  }
+  #readme {
+    background-color: var(--bg);
+    border-radius: 12px;
+    display: block;
+    padding: 2rem;
+  }
+  #readme>pre>.hljs {
+    padding-top: 1rem;
+  }
+  #readme>pre {
+    white-space: pre;
+    display: block;
+  }
+  li {
+    color: var(--main);
+    font-size: 18px;
+    font-family: 'light';
+    text-decoration: none;
+    margin-left: none;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  #main-menu {
+    width: fit-content;
+    float: left;
+    margin: 0px;
+    margin-left: 3%;
+    margin-right: 3%;
+    max-width: 20%;
+  }
+  #main-box {
+    /* margin-left: 20%;
+    width: 60%;
+    align-self: center; */
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    justify-content: flex-start;
+    margin-top: 3%;
+  }
+  #table-contents {
+    float: left;
+    max-width: 30%;
+    min-width: 20%;
+    padding: 0px;
+    margin-left: 1%;
+    margin-right: 1%;
+    /* position: sticky;
+    top: 22%; */
+    background-color: var(--dark);
+  }
+  #methods-wrap {
+    max-width: 70%;
+    min-width: 70%;
+  }
+  .content-table {
+    width: fit-content;
+  }
+  .module-wrap {
+    background-color: var(--bg);
+    min-height: 20%;
+    margin-bottom: 8%;
+    padding: 1.2rem;
+    border-radius: 18px;
+    min-width: 20%;
+  }
+  .side {
+    background-color: var(--dark);
+    width: fit-content;
+  }
+  .module {
+    width: 90%;
+    height: 8rem;
+  }
+  .flag {
+    border-radius: 8px;
+    background-color: var(--bg);
+    color: var(--dark);
+    font-weight: bold;
+    font-family: Consolas, Menlo, "Courier New", monospace;
+    padding: 0.25em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    margin: 0.25em;
+    position: relative;
+    top: -2px;
+  }
+  .type {
+    border-radius: 8px;
+    background-color: var(--dark);
+    color: var(--main);
+    font-weight: bold;
+    font-size: 80%;
+    font-family: Consolas, Menlo, "Courier New", monospace;
+    padding: 0.25em;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    margin: 0.25em;
+  }
+}
